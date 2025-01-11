@@ -4,10 +4,13 @@
                 <div id="">
                     <p>〇〇さん</p>
                 </div>
-                <ul>
-                    <li><a href="">ホーム</a></li>
-                    <li><a href="">プロフィール</a></li>
-                    <li><a href="">ログアウト</a></li>
-                </ul>
+                <span class="menu-button"></span>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="/top">ホーム</a></li>
+                        <li class="menu-item"><a href="/profile">プロフィール</a></li>
+                        <li class="menu-item"><a href="/login">ログアウト</a></li>
+                    </ul>
+                </div>
             </div>
         </div>

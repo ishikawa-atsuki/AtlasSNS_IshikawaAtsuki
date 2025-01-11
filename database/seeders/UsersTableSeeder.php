@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            ['username' => 'guest', 'email' => 'hogo@hoge.com', 'password' => 'hogehoge',]
+            ['username' => 'guest', 'email' => 'hoge@hoge.com', 'password' => bcrypt('hogehoge'),]
         // 暗号化処理＝ハッシュ化？
         ]);
     }
