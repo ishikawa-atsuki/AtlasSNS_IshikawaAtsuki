@@ -1,6 +1,10 @@
 <x-logout-layout>
     <!-- 適切なURLを入力してください -->
-{{ Form::open(['url' => '/added']) }}
+{{ Form::open(['url' => '/register']) }}
+
+@foreach ($errors->all() as $error)
+  <li>{{$error}}</li>
+@endforeach
 
 <h2>新規ユーザー登録</h2>
 

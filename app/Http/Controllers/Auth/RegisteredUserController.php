@@ -30,16 +30,23 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $validatied = $request->validate([
+    // バリデーション条件
+        $request->validate([
             'username' => 'required|max:12|min:2',
             'email' => 'required|email|max:40|min:5|unique:email',
             'password' => 'required|alpha-num|max:20|min:8',
             'passwordconfirm' => 'same:password'
         ]);
+    // 判定
+        $username = $request->input('username');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $passwordconfirm = $request->input('passwordconfirm');
+    // 格納
         User::create([
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'username' => $username,
+            'email' => $email,
+            'password' => Hash::make($password),
         ]);
 
         return redirect('added');
