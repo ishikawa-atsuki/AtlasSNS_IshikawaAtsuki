@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
     // バリデーション条件
         $request->validate([
             'username' => 'required|max:12|min:2',
-            'email' => 'required|email|max:40|min:5|unique:email',
+            'email' => 'required|email|max:40|min:5|unique:users',
             'password' => 'required|alpha-num|max:20|min:8',
             'passwordconfirm' => 'same:password'
         ]);

@@ -15,7 +15,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <script src="./public/js/script.js"></script>
+   <script src="{{ asset('js/script.js') }}"></script>
   <!--サイトのアイコン指定-->
   <link rel="icon" href="画像URL" sizes="16x16" type="image/png" />
   <link rel="icon" href="画像URL" sizes="32x32" type="image/png" />
@@ -42,14 +42,14 @@
           <p>フォロー数</p>
           <p>〇〇名</p>
         </div>
-        <p class="btn"><a href="">フォローリスト</a></p>
+        <p class="btn"><a href="follow-list">フォローリスト</a></p>
         <div>
           <p>フォロワー数</p>
           <p>〇〇名</p>
         </div>
-        <p class="btn"><a href="">フォロワーリスト</a></p>
+        <p class="btn"><a href="follower-list">フォロワーリスト</a></p>
       </div>
-      <p class="btn"><a href="">ユーザー検索</a></p>
+      <p class="btn"><a href="search">ユーザー検索</a></p>
     </div>
   </div>
   <footer>

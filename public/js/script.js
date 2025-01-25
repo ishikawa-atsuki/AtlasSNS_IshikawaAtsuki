@@ -1,3 +1,8 @@
+// jQuery実装確認
+//     $(function () {
+//       alert('hello world')
+//     });
+
 $(function () {
   $('.menu-button').click(function () {
     $(this).toggleClass('active');
