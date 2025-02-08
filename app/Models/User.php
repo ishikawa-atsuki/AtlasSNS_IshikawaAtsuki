@@ -33,8 +33,12 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    // フォローしている
+    // ユーザー⇒投稿（1対多）のリレーション
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
 
+    // フォローしている
     public function follows()
     {
 
@@ -45,7 +49,6 @@ class User extends Authenticatable
     }
 
     // フォローされている
-
     public function followers()
     {
 

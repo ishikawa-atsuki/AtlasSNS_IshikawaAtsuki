@@ -11,14 +11,16 @@
   <button type="submit" class="btn btn-success pull-right"><img src="images/post.png" alt="送信"></button>
   {{ Form::close() }}
 
+  {{--
   <div>
     @foreach($list as $list)
     <tr>
       <td>{{ $list->user_id }}</td>
       <td>{{ $list->post }}</td>
-      <td>{{ $list->create_at }}</td>
+      <td>{{ $list->created_at }}</td>
     </tr>
     @endforeach
   </div>
+  --}}
 
 </x-login-layout>
